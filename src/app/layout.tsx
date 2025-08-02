@@ -12,9 +12,9 @@ import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/utils/helpers";
 
 export const metadata: Metadata = {
-  title: Pop Stream,
-  applicationName: Pop Stream,
-  description: a cool free movies streaming platform ,
+  title: "Pop Stream",
+  applicationName: "Pop Stream",
+  description: "A cool free movies streaming platform",
   manifest: "/manifest.json",
   icons: {
     icon: siteConfig.favicon,
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: Pop Stream,
+    siteName: "Pop Stream",
     title: {
-      default: Pop Stream,
-      template: free streaming site,
+      default: "Pop Stream",
+      template: "Free streaming site",
     },
-    description: free streaming site,
+    description: "Free streaming site",
   },
   formatDetection: {
     telephone: false,
