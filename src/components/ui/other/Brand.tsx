@@ -7,11 +7,11 @@ export default function Brand() {
     <div>
       <Link href="/" className={Saira.className} style={{ fontWeight: 600, fontSize: 30 }}>
         <span className="flex items-center tracking-widest">
-          CINE{" "}
+          Pop{" "}
           <span>
             <TbPlayerTrackNextFilled className="size-full px-[2px] text-primary" />
           </span>{" "}
-          TMA
+          Stream
         </span>
       </Link>
     </div>
