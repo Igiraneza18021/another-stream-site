@@ -14,7 +14,7 @@ import {
 import { TbFolder, TbFolderFilled } from "react-icons/tb";
 
 export const siteConfig: SiteConfigType = {
-  name: "Cinextma",
+  name: "PopStream",
   description: "Your only choice for a free movies and tv shows streaming website.",
   favicon: "/favicon.ico",
   navItems: [
@@ -37,7 +37,7 @@ export const siteConfig: SiteConfigType = {
       activeIcon: <BiSolidSearchAlt2 className="size-full" />,
     },
     {
-      label: "Library",
+      label: "Watchlist",
       href: "/library",
       icon: <TbFolder className="size-full" />,
       activeIcon: <TbFolderFilled className="size-full" />,
@@ -128,7 +128,7 @@ export const siteConfig: SiteConfigType = {
     ],
   },
   socials: {
-    github: "https://github.com/wisnuwirayuda15/cinextma",
+    github: "https://github.com/wisnuwirayuda15/PopStream",
   },
 };
 

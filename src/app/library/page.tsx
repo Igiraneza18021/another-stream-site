@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 const LibraryList = dynamic(() => import("@/components/sections/Library/List"));
 
 export const metadata: Metadata = {
-  title: `Library | ${siteConfig.name}`,
+  title: `Watchlist | ${siteConfig.name}`,
 };
 
 const LibraryPage: NextPage = () => {

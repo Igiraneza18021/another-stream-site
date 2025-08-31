@@ -1,5 +1,5 @@
 {
-  "name": "cinextma",
+  "name": "PopStream",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "@bprogress/next": "^3.2.12",
     "@designbycode/tailwindcss-text-shadow": "^2.2.1",
     "@ducanh2912/next-pwa": "^10.2.9",
+    "@headlessui/react": "^2.2.7",
     "@heroui/react": "^2.7.11",
     "@mantine/hooks": "^8.2.4",
     "@tanstack/react-query": "^5.85.3",
@@ -20,6 +21,7 @@
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^11.18.2",
+    "lucide-react": "^0.542.0",
     "next": "^15.4.6",
     "next-themes": "^0.4.6",
     "nuqs": "^2.4.3",

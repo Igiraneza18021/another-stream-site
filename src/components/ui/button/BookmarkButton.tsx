@@ -31,13 +31,13 @@ const BookmarkButton: React.FC<BookmarkButtonProps> = ({ data, isTooltipDisabled
   const handleBookmark = () => {
     if (isSaved) {
       setBookmarks(bookmarks.filter((savedMovie) => savedMovie.id !== data.id));
-      toast(`${movieData.title} removed from your library!`, {
+      toast(`${movieData.title} removed from your Watchlist!`, {
         icon: <Trash className="text-danger" />,
       });
     } else {
       setBookmarks([...bookmarks, movieData]);
       startVibration([100]);
-      toast.success(`${movieData.title} saved to your library!`);
+      toast.success(`${movieData.title} saved to your Watchlist!`);
     }
   };
 

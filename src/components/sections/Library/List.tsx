@@ -68,7 +68,7 @@ const LibraryList = () => {
             variant="shadow"
             onPress={() => setSavedMovies(savedMovies.filter((movie) => movie.type !== content))}
           >
-            Clear {content === "movie" ? "Movies" : "TV Series"} Library
+            Clear {content === "movie" ? "Movies" : "TV Series"} Watchlist
           </Button>
         )}
       </div>
@@ -116,7 +116,7 @@ const LibraryList = () => {
           })}
         </div>
       ) : (
-        <p>No {content === "movie" ? "movies" : "TV series"} saved in your library.</p>
+        <p>No {content === "movie" ? "movies" : "TV series"} saved in your Watchlist.</p>
       )}
     </div>
   );
