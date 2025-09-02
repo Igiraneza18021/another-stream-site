@@ -18,9 +18,9 @@ const AboutPage: NextPage = () => {
         <Suspense>
           <FAQ />
         </Suspense>
-        <Link target="_blank" href={siteConfig.socials.github} className="flex justify-center">
+        {/* <Link target="_blank" href={siteConfig.socials.github} className="flex justify-center">
           <FaGithub size={30} />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

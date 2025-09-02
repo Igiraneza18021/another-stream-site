@@ -12,6 +12,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/utils/helpers";
 import { IS_PRODUCTION } from "@/utils/constants";
 import dynamic from "next/dynamic";
+import Footer from "@/components/ui/layout/Footer";
+import LayoutClientWrapper from "@/components/ui/layout/LayoutClientWrapper";
 
 const Disclaimer = dynamic(() => import("@/components/ui/overlay/Disclaimer"));
 
@@ -47,7 +49,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={cn("min-h-screen select-none bg-background antialiased", Poppins.className)}>
+      <body
+        className={cn(
+          "min-h-screen flex flex-col bg-background antialiased select-none",
+          Poppins.className
+        )}
+      >
         <Providers>
           {IS_PRODUCTION && <Disclaimer />}
 
@@ -56,13 +63,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
           <TopNavbar />
 
-          {/* Main content */}
-          <main className="container mx-auto max-w-full px-3 py-8 sm:px-5">
+          {/* Main content grows and pushes footer down */}
+          <main className="flex-grow container mx-auto max-w-full px-3 py-8 sm:px-5">
             {children}
           </main>
 
           <BottomNavbar />
+          
+          {/* Use the client wrapper for conditional footer rendering */}
+          <LayoutClientWrapper />
         </Providers>
+
         <SpeedInsights debug={false} />
         <Analytics debug={false} />
       </body>
