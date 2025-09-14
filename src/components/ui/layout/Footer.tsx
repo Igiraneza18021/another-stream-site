@@ -76,7 +76,7 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">About POP Stream</h3>
           <p className="text-sm text-gray-400">
-            POP Stream brings you the latest trending, popular, and upcoming movies and TV shows. 
+            POPP Stream brings you the latest trending, popular, and upcoming movies and TV shows. 
             Stream, discover, and enjoy entertainment anytime.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="border-t border-gray-700 mt-10 pt-5 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} POP Stream. All rights reserved.
+        © {new Date().getFullYear()} POPP Stream. All rights reserved.
       </div>
     </footer>
   );
