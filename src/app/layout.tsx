@@ -19,7 +19,7 @@ const Disclaimer = dynamic(() => import("@/components/ui/overlay/Disclaimer"));
 
 export const metadata: Metadata = {
   title: "Pop Stream",
-  applicationName: "Pop Stream",
+  applicationName: "Popp Stream",
   description: "A cool free movies streaming platform",
   manifest: "/manifest.json",
   icons: { icon: siteConfig.favicon },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Pop Stream",
-    title: { default: "Pop Stream", template: "Free streaming site" },
+    title: { default: "Popp Stream", template: "Free streaming site" },
     description: "Free streaming site",
   },
   formatDetection: { telephone: false },
