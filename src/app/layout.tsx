@@ -18,8 +18,8 @@ import LayoutClientWrapper from "@/components/ui/layout/LayoutClientWrapper";
 const Disclaimer = dynamic(() => import("@/components/ui/overlay/Disclaimer"));
 
 export const metadata: Metadata = {
-  title: "Pop Stream",
-  applicationName: "Popp Stream",
+  title: "PI Stream",
+  applicationName: "PI Stream",
   description: "A cool free movies streaming platform",
   manifest: "/manifest.json",
   icons: { icon: siteConfig.favicon },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Pop Stream",
-    title: { default: "Popp Stream", template: "Free streaming site" },
+    title: { default: "PI Stream", template: "Free streaming site" },
     description: "Free streaming site",
   },
   formatDetection: { telephone: false },
