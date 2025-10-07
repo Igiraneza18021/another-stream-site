@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "Pop Stream",
+    siteName: "Pi Stream",
     title: { default: "PI Stream", template: "Free streaming site" },
     description: "Free streaming site",
   },

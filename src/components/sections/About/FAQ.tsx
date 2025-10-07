@@ -5,9 +5,9 @@ import { Accordion, AccordionItem, Link } from "@heroui/react";
 
 const FAQS = [
   {
-    title: "🤔 What is PopStream?",
+    title: "🤔 What is pi stream?",
     description:
-      "Just like every other website, PopStream is also a streaming site that helps to easily access all the TV shows and movies we wanted, without spending hours searching for them.",
+      "Just like every other website, pi stream is also a streaming site that helps to easily access all the TV shows and movies we wanted, without spending hours searching for them.",
   },
   {
     title: "❓ So what do we actually do?",
@@ -19,7 +19,7 @@ const FAQS = [
     description: (
       <p>
         We are very sorry that we can't help you with that. We have no control in the ads being
-        served. Don't download anything in the popups. If you don't want to be annoyed. We highly
+        served. Don't download anything in the Piups. If you don't want to be annoyed. We highly
         recommend subscribing to a legal streaming service that you can afford (or use an adblocker
         like{" "}
         <Link href="https://ublockorigin.com/" target="_blank" className="font-bold">

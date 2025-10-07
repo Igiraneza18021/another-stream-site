@@ -16,7 +16,7 @@ export const DISCOVER_MOVIES_VALID_QUERY_TYPES = [
   "discover",
   "todayTrending",
   "thisWeekTrending",
-  "popular",
+  "Piular",
   "nowPlaying",
   "upcoming",
   "topRated",
@@ -28,7 +28,7 @@ export const DISCOVER_TVS_VALID_QUERY_TYPES = [
   "discover",
   "todayTrending",
   "thisWeekTrending",
-  "popular",
+  "Piular",
   "onTheAir",
   "topRated",
 ] as const;

@@ -18,7 +18,7 @@ const useFetchDiscoverMovies = ({
   const discover = () => tmdb.discover.movie({ page: page, with_genres: genres });
   const todayTrending = () => tmdb.trending.trending("movie", "day", { page: page });
   const thisWeekTrending = () => tmdb.trending.trending("movie", "week", { page: page });
-  const popular = () => tmdb.movies.popular({ page: page });
+  const Piular = () => tmdb.movies.Piular({ page: page });
   const nowPlaying = () => tmdb.movies.nowPlaying({ page: page });
   const upcoming = () => tmdb.movies.upcoming({ page: page });
   const topRated = () => tmdb.movies.topRated({ page: page });
@@ -27,7 +27,7 @@ const useFetchDiscoverMovies = ({
     discover,
     todayTrending,
     thisWeekTrending,
-    popular,
+    Piular,
     nowPlaying,
     upcoming,
     topRated,

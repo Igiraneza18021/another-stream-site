@@ -35,9 +35,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Popular Categories */}
+        {/* Piular Categories */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Popular Categories</h3>
+          <h3 className="text-lg font-semibold text-white mb-4">Piular Categories</h3>
           <ul className="space-y-2">
             <li>
               <Link href="/#today-trending-movies-list" className="hover:text-white">
@@ -50,8 +50,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/#popular-movies-list" className="hover:text-white">
-                Popular Movies
+              <Link href="/#Piular-movies-list" className="hover:text-white">
+                Piular Movies
               </Link>
             </li>
             <li>
@@ -74,9 +74,9 @@ export default function Footer() {
 
         {/* Branding */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">About POP Stream</h3>
+          <h3 className="text-lg font-semibold text-white mb-4">About Pi Stream</h3>
           <p className="text-sm text-gray-400">
-            POPP Stream brings you the latest trending, popular, and upcoming movies and TV shows. 
+            PiP Stream brings you the latest trending, Piular, and upcoming movies and TV shows. 
             Stream, discover, and enjoy entertainment anytime.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="border-t border-gray-700 mt-10 pt-5 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} POPP Stream. All rights reserved.
+        © {new Date().getFullYear()} PiP Stream. All rights reserved.
       </div>
     </footer>
   );

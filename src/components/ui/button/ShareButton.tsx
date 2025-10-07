@@ -31,7 +31,7 @@ interface ShareButtonProps {
   type?: ContentType;
 }
 
-const HASTAGS = ["PopStream", "free", "movies", "streaming"];
+const HASTAGS = ["pi stream", "free", "movies", "streaming"];
 
 const SHARE_BUTTONS = [
   {
@@ -78,7 +78,7 @@ const SHARE_BUTTONS = [
 
 const ShareButton: React.FC<ShareButtonProps> = ({ title, id, type = "movie" }) => {
   const url = `https://${location.hostname}/${type}/${id}`;
-  const description = `Check out and stream ${title} on PopStream for FREE!!`;
+  const description = `Check out and stream ${title} on pi stream for FREE!!`;
 
   return (
     <VaulDrawer

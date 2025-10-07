@@ -38,17 +38,45 @@ const SAMPLE_TV: TmdbItem = {
 };
 
 async function fetchTrending(kind: ContentKind): Promise<TmdbItem[]> {
+  const token = process.env.NEXT_PUBLIC_TMDB_ACCESS_TOKEN;
   const key = process.env.NEXT_PUBLIC_TMDB_API_KEY;
-  // If no public key is configured, we’ll gracefully fall back to samples.
-  if (!key) {
+  
+  // If no access token or API key is configured, we'll gracefully fall back to samples.
+  if (!token && !key) {
     return kind === "movie" ? [SAMPLE_MOVIE] : [SAMPLE_TV];
   }
-  const res = await fetch(
-    `https://api.themoviedb.org/3/trending/${kind}/day?language=en-GB&api_key=${key}`,
-  );
-  if (!res.ok) throw new Error("Failed to fetch trending");
-  const json = await res.json();
-  return (json?.results ?? []) as TmdbItem[];
+
+  try {
+    const url = new URL(`https://api.themoviedb.org/3/trending/${kind}/day`);
+    url.searchParams.set("language", "en-GB");
+    
+    const headers: Record<string, string> = {
+      "Accept": "application/json",
+    };
+    
+    // Use Bearer token if available, otherwise fall back to API key
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    } else if (key) {
+      url.searchParams.set("api_key", key);
+    }
+
+    const res = await fetch(url.toString(), {
+      method: "GET",
+      headers,
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch trending: ${res.status} ${res.statusText}`);
+    }
+
+    const json = await res.json();
+    return (json?.results ?? []) as TmdbItem[];
+  } catch (error) {
+    console.error("Error fetching trending:", error);
+    throw error;
+  }
 }
 
 function truncate(text = "", n = 180) {
@@ -70,7 +98,10 @@ export default function HomeHero({ content }: { content: ContentKind }) {
       })
       .catch((e: unknown) => {
         if (!alive) return;
-        setError(e instanceof Error ? e.message : "Unknown error");
+        const errorMessage = e instanceof Error ? e.message : "Unknown error";
+        setError(errorMessage);
+        console.error("Failed to fetch trending content:", errorMessage);
+        // Only use sample data as absolute fallback if API completely fails
         setItems(content === "movie" ? [SAMPLE_MOVIE] : [SAMPLE_TV]);
       });
     return () => {
@@ -147,8 +178,8 @@ export default function HomeHero({ content }: { content: ContentKind }) {
             </div>
 
             {error && (
-              <p className="mt-4 text-xs text-red-200/90">
-                Using fallback data (reason: {error})
+              <p className="mt-4 text-xs text-yellow-200/90">
+                ⚠️ Using fallback data (API error: {error})
               </p>
             )}
           </div>

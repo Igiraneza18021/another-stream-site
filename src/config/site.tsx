@@ -14,7 +14,7 @@ import {
 import { TbFolder, TbFolderFilled } from "react-icons/tb";
 
 export const siteConfig: SiteConfigType = {
-  name: "PopStream",
+  name: "pi stream",
   description: "Your only choice for a free movies and tv shows streaming website.",
   favicon: "/favicon.ico",
   navItems: [
@@ -65,6 +65,11 @@ export const siteConfig: SiteConfigType = {
   ],
   queryLists: {
     movies: [
+      {
+        name: "New Movies",
+        query: () => tmdb.movies.nowPlaying(),
+        param: "newMovies",
+      },
       {
         name: "Today's Trending Movies",
         query: () => tmdb.trending.trending("movie", "day"),

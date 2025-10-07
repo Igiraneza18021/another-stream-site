@@ -39,7 +39,7 @@ const TvShowPlayerSourceSelection: React.FC<TvShowPlayerSourceSelectionProps> = 
           </div>
           <div className="flex items-center gap-2">
             <Ads className="text-primary-500" />
-            <span>May contain popup ads</span>
+            <span>May contain Piup ads</span>
           </div>
         </div>
         <SelectButton

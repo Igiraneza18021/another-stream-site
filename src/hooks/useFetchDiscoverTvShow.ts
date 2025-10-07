@@ -18,7 +18,7 @@ const useFetchDiscoverTvShows = ({
   const discover = () => tmdb.discover.tvShow({ page: page, with_genres: genres });
   const todayTrending = () => tmdb.trending.trending("tv", "day", { page: page });
   const thisWeekTrending = () => tmdb.trending.trending("tv", "week", { page: page });
-  const popular = () => tmdb.tvShows.popular({ page: page });
+  const Piular = () => tmdb.tvShows.Piular({ page: page });
   const onTheAir = () => tmdb.tvShows.onTheAir({ page: page });
   const topRated = () => tmdb.tvShows.topRated({ page: page });
 
@@ -26,12 +26,12 @@ const useFetchDiscoverTvShows = ({
     discover,
     todayTrending,
     thisWeekTrending,
-    popular,
+    Piular,
     onTheAir,
     topRated,
   }[type];
 
-  // @ts-expect-error: Property 'adult' is missing in type 'PopularTvShowResult' but required in type 'TV'.
+  // @ts-expect-error: Property 'adult' is missing in type 'PiularTvShowResult' but required in type 'TV'.
   return queryData();
 };
 

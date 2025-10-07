@@ -44,7 +44,7 @@ const AdsWarning: React.FC = () => {
         <ModalBody>
           <ScrollShadow hideScrollBar className="space-y-4">
             <p className="text-center">
-              As our content is hosted by various third party providers, you may encounter pop up
+              As our content is hosted by various third party providers, you may encounter Pi up
               advertisements while streaming. To improve your viewing experience, we suggest using
               an ad-blocker like{" "}
               <Link

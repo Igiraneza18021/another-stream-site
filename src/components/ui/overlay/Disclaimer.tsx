@@ -55,23 +55,23 @@ const Disclaimer: React.FC = () => {
         <ModalBody>
           <ScrollShadow hideScrollBar className="space-y-4">
             <p>
-              Welcome to Pop Stream - a free and open-source movie streaming website. Please read this
+              Welcome to Pi Stream - a free and open-source movie streaming website. Please read this
               disclaimer carefully before using this website.
             </p>
             <p>
-              Pop Stream is developed for <strong>ntertainment  purposes.</strong>{" "}
+              Pi Stream is developed for <strong>ntertainment  purposes.</strong>{" "}
               This website 
               and is not meant to promote or encourage digital piracy in any form.
             </p>
             <p>
-              All content displayed on Pop Stream (including but not limited to movies, images,
+              All content displayed on Pi Stream (including but not limited to movies, images,
               posters, and related information) is sourced from{" "}
               <strong>third-party providers through APIs or embedding.</strong> I do not host,
               store, or distribute any media files on my servers. The website merely aggregates
               content that is already available on the internet.
             </p>
             <p>
-              By using Pop Stream, you acknowledge that I bears no responsibility for user actions,
+              By using Pi Stream, you acknowledge that I bears no responsibility for user actions,
               content accuracy, or any direct or indirect damages arising from the use of this
               website. Users are solely responsible for their actions while using this service. I
               respect intellectual property rights and will respond to legitimate requests from
@@ -80,7 +80,7 @@ const Disclaimer: React.FC = () => {
             <p>
               This website should only be used for entertainment purposes. Any illegal activities,
               including but not limited to unauthorized downloading, redistribution of content, or
-              commercial use, are strictly prohibited. By using Pop Stream, you agree to these terms
+              commercial use, are strictly prohibited. By using Pi Stream, you agree to these terms
               and acknowledge that <strong>you use the service at your own risk.</strong>
             </p>
           </ScrollShadow>

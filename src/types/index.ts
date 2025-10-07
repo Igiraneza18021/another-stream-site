@@ -9,7 +9,7 @@ export interface Params<T> {
 export type MovieParam =
   | "todayTrending"
   | "thisWeekTrending"
-  | "popular"
+  | "Piular"
   | "nowPlaying"
   | "upcoming"
   | "topRated";
@@ -17,7 +17,7 @@ export type MovieParam =
 export type TvShowParam =
   | "todayTrending"
   | "thisWeekTrending"
-  | "popular"
+  | "Piular"
   | "onTheAir"
   | "topRated";
 
